@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hryNG/VcGuPEqRdE+GCk4FQBiZ6mgxmMVztgTRC4XxbBL6A6nVjoPwuWIclVIohWGegmVm9Kzc5oDnkot0Se0Q==",
+  "dgSpecHash": "7lhJ5xzuJZ+yA5dZdNG2vUmUWHLGl+sg1im08Y0qlhv3IiWUQ8ETwM4tvoD8n8u4NgCvq7n4bXPQw23W5glq4w==",
   "success": true,
   "projectFilePath": "/home/alixsanta/Bibliotheque/Bibliothèque.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/alixsanta/.nuget/packages/csvhelper/30.0.1/csvhelper.30.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

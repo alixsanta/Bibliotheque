@@ -1,10 +1,13 @@
-﻿using System;
+﻿using System.Globalization;
+using CsvHelper;
+using System;
     namespace Bibliotheque {
         internal class Program
         {
             static void Main(string[] args)
             {
-                // while(true) {
+                bool sortie = false;
+                while(true) {
                     Console.WriteLine("Bonjour et bienvenue dans votre logiciel de consultation du stock :");
                     Console.WriteLine();
                     Console.Write("1. Ajouter/Modifier un livre | ");
@@ -29,7 +32,7 @@
                             string? choix = Console.ReadLine();
 
                             Livre livre1 = new Livre("Alice", 0, new DateTime(1900, 07, 09), "français", 5, "tout âge", "Caroll", "Lewis");
-                            livre1.AfficherLivre();
+                            Livre.AfficherLivre(livre1);
                             break;
 
                         case "4":
@@ -41,7 +44,11 @@
                         break;
                     }
 
-                // }
+                }
+
+                using var writer = new StreamWriter("Bibliotheque.csv");
+                using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+                csv.WriteRecords(Bibliothèque);
             }
         }
     }
